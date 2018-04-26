@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">RecipeBook</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Recipes List</string>
     <string name="title_activity_recipe_select">RecipeSelect</string>
 </resources>

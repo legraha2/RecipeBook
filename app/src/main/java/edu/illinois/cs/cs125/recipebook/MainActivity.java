@@ -1,5 +1,6 @@
 package edu.illinois.cs.cs125.recipebook;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -98,6 +99,8 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
+        Intent myIntent = new Intent(MainActivity.this, RecipeSelect.class);
+        MainActivity.this.startActivity(myIntent);
 
         return super.onOptionsItemSelected(item);
     }
