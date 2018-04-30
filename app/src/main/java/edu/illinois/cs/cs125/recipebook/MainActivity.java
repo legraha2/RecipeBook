@@ -70,11 +70,11 @@ public class MainActivity extends AppCompatActivity {
                     InputStreamReader tmp = new InputStreamReader( in );
                     BufferedReader reader = new BufferedReader(tmp);
                     String str;
-                    StringBuilder buf = new StringBuilder();
+                    StringBuilder buff = new StringBuilder();
                     while ((str = reader.readLine()) != null) {
-                        buf.append(str + "\n");
+                        buff.append(str + "\n");
                     } in .close();
-                    content = buf.toString();
+                    content = buff.toString();
                 }
             } catch (java.io.FileNotFoundException e) {} catch (Throwable t) {
                 Toast.makeText(this, "Exception: " + t.toString(), Toast.LENGTH_LONG).show();
@@ -95,10 +95,6 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
         Intent myIntent = new Intent(MainActivity.this, RecipeSelect.class);
         MainActivity.this.startActivity(myIntent);
 

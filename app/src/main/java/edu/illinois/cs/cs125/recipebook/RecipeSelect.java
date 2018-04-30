@@ -1,5 +1,7 @@
 package edu.illinois.cs.cs125.recipebook;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -23,6 +25,7 @@ public class RecipeSelect extends AppCompatActivity {
     recipeList = new ArrayList<>();
     private RecipeAdapter nAdapter;
     private RecyclerView recipeRecycler;
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,9 @@ public class RecipeSelect extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+
+                Intent intent = new Intent(this, MainActivity.class);
+                context.startActivity(intent);
             }
         });
 
